@@ -1,0 +1,15 @@
+language: cpp
+
+compiler:
+  - clang
+  - gcc
+
+env:
+  - STD=c++03
+  - STD=c++0x
+
+install:
+  - cd test; make STD=$STD
+
+script:
+  - cd test; make test-all
